@@ -6,10 +6,7 @@ angular.module('TodoList',[]).controller('TodoCtrl', function($scope) {
     {hex: '#fff1d0' },
     {hex: '#dd1c1a' }
   ]
-  $scope.todos = [
-    {text: 'Learn AngularJS', done:false, color: bgColor[0].hex},
-    {text: 'Build an app', done:false, color: bgColor[0].hex}
-  ];
+  $scope.todos = [];
 
  $scope.getTotalTodos = function () {
    return $scope.todos.length;
