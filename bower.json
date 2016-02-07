@@ -1,0 +1,33 @@
+{
+  "name": "angular",
+  "description": "learning angular",
+  "main": "index.js",
+  "license": "ISC",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "dependencies": {
+    "angular": "1.2.16",
+    "angular-route": "1.2.16",
+    "angular-sanitize": "1.2.16",
+    "angular-mocks": "1.2.16",
+    "jquery": "1.8.3",
+    "underscore": "1.6.0",
+    "restangular": "1.4.0"
+  },
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
