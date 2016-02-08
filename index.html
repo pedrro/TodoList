@@ -30,7 +30,7 @@
         </ul>
       </div>
       <form name="todoForm" class="form large" action="index.html" method="post">
-        <input type="text" class="form-control input-lg" ng-model="formTodoText" placeholder="Put your TODO here" required ng-model-instant>
+        <input type="text" class="form-control input-lg" ng-model="formTodoText" placeholder="Put your TODO here" required ng-minlength="3" ng-maxlength="150" ng-model-instant>
         <button type="button" class="btn btn-success col-xs-12 col-md-12" ng-click="todoForm.$valid && addTodo()" name="addTodoBtn" >Add</button>
       </form>
       <button class="btn btn-danger col-xs-12 col-md-12" ng-click="clearCompleted()">Clear list</button>
