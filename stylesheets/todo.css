@@ -2,3 +2,7 @@
   text-decoration: line-through;
   color:grey;
 }
+
+.panel-text-not-overflow{
+  word-wrap:break-word;
+}
