@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="stylesheets/todo.css">
     <link rel="stylesheet" href="stylesheets/vendor/bootstrap.min.css">
   </head>
-  <body style="background-color: #EBEBEB">
+  <body class="bg-color">
     <div ng-controller="TodoCtrl">
       <h2 align="center"> Total of Todo's: {{getTotalTodos()}}</h2>
-      <div class="panel panel-primary panel-text-not-overflow col-xs-12 col-md-12">
-        <ul class="list-group" ng-repeat="todo in todos">
-          <li class="list-group-item" style="background-color: {{todo.color}}">
-            <div class="checkbox">
+      <div class="panel bg-color panel-padding panel-text-not-overflow col-xs-12 col-md-12" style="padding: inherit">
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="todo in todos"style="background-color: {{todo.color}}">
+            <div class="checkbox checkbox-padding">
               <input type="checkbox" ng-model="todo.done" />
               <h4 for="checkbox" class="done-{{todo.done}}">
                 {{todo.text}}

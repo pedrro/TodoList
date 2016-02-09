@@ -6,3 +6,15 @@
 .panel-text-not-overflow{
   word-wrap:break-word;
 }
+
+.checkbox-padding{
+  padding-left: inherit;
+}
+
+.bg-color {
+  background-color: #EBEBEB !important;
+}
+
+.panel-padding {
+  padding: inherit;
+}
