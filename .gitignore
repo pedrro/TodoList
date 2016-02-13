@@ -1,9 +1,2 @@
-bower_components/
 node_modules/
-
-bower.json
-package.json
-params.json
-
-
 .DS_Store
