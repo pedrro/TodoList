@@ -16,12 +16,14 @@
   </head>
   <body class="bg-color">
     <div ng-controller="TodoCtrl">
-      <h2 align="center"> Total of Todo's: {{getTotalTodos()}}</h2>
+      <h2 align="center">
+        Total of Todo's:
+        {{getTotalTodos()}}</h2>
       <div class="panel bg-color panel-padding panel-text-not-overflow col-xs-12 col-md-12" style="padding: inherit">
         <ul class="list-group">
-          <li class="list-group-item" ng-repeat="todo in todos"style="background-color: {{todo.color}}">
+          <li class="list-group-item" ng-repeat="todo in todos" style="background-color: {{todo.color}}">
             <div class="checkbox checkbox-padding">
-              <input type="checkbox" ng-model="todo.done" />
+              <input type="checkbox" ng-model="todo.done"/>
               <h4 for="checkbox" class="done-{{todo.done}}">
                 {{todo.text}}
               </h4>
@@ -31,9 +33,21 @@
       </div>
       <form name="todoForm" class="form large" action="index.html" method="post">
         <input type="text" class="form-control input-lg" ng-model="formTodoText" placeholder="Put your TODO here" required ng-minlength="3" ng-maxlength="150" ng-model-instant>
-        <button type="button" class="btn btn-success btn-lg col-xs-12 col-md-12" ng-click="todoForm.$valid && addTodo()" name="addTodoBtn" >Add</button>
+        <button type="button" class="btn btn-success btn-lg col-xs-12 col-md-12" ng-click="todoForm.$valid && addTodo()" name="addTodoBtn">Add</button>
       </form>
       <button class="btn btn-danger btn-lg col-xs-12 col-md-12" ng-click="clearCompleted()">Clear list</button>
     </div>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol)
+        ? "https://ssl."
+        : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-70316402-1");
+        pageTracker._trackPageview();
+      } catch (err) {}
+    </script>
   </body>
 </html>
