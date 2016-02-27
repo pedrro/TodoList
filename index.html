@@ -23,8 +23,8 @@
         <ul class="list-group">
           <li class="list-group-item" ng-repeat="todo in todos" style="background-color: {{todo.color}}">
             <div class="checkbox checkbox-padding">
-              <input type="checkbox" ng-model="todo.done"/>
-              <h4 for="checkbox" class="done-{{todo.done}}">
+              <input id="checkbox_{{$index}}" type="checkbox" ng-model="todo.done"/>
+              <h4 id="todo_{{$index}}" for="checkbox" class="done-{{todo.done}}">
                 {{todo.text}}
               </h4>
             </div>
@@ -33,9 +33,9 @@
       </div>
       <form name="todoForm" class="form large" action="index.html" method="post">
         <input type="text" class="form-control input-lg" ng-model="formTodoText" placeholder="Put your TODO here" required ng-minlength="3" ng-maxlength="150" ng-model-instant>
-        <button type="button" class="btn btn-success btn-lg col-xs-12 col-md-12" ng-click="todoForm.$valid && addTodo()" name="addTodoBtn">Add</button>
+        <button id="AddTodoBtn" type="button" class="btn btn-success btn-lg col-xs-12 col-md-12" ng-click="todoForm.$valid && addTodo()" name="addTodoBtn">Add</button>
       </form>
-      <button class="btn btn-danger btn-lg col-xs-12 col-md-12" ng-click="clearCompleted()">Clear list</button>
+      <button id="RemoveTodoBtn" class="btn btn-danger btn-lg col-xs-12 col-md-12" ng-click="clearCompleted()">Clear list</button>
     </div>
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol)
