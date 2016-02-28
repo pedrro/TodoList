@@ -1,4 +1,6 @@
-angular.module('TodoList',[]).controller('TodoCtrl', function($scope) {
+angular.module('TodoList').controller('TodoCtrl', TodoCtrl);
+
+function TodoCtrl($scope) {
   var bgColor = [
     {hex: '#086788' },
     {hex: '#07a0c3' },
@@ -24,4 +26,4 @@ angular.module('TodoList',[]).controller('TodoCtrl', function($scope) {
     $scope.formTodoText = '';
     $scope.totalTodos += 1;
   };
-});
+}
