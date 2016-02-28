@@ -1,5 +1,12 @@
 exports.config = {
+  directConnect: true,
   framework: 'jasmine',
-  seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['test/**_spec.js']
+  specs: ['test/**_spec.js'],
+  capabilities: {
+    'browserName': 'chrome'
+  }
 };
+
+if (process.env.SNAP_CI) {
+  exports.config.chromeDriver = '/usr/local/bin/chromedriver';
+}

@@ -1,16 +1,21 @@
 {
   "name": "angular",
   "version": "1.0.0",
+  "author":"Pedro <github.com/pedrro>",
   "description": "learning angular",
-  "main": "index.js",
+  "scripts": {
+    "postinstall": "./node_modules/protractor/bin/webdriver-manager update",
+    "start": "node server.js",
+    "test": "node_modules/.bin/protractor spec/e2e/conf.js"
+  },
   "dependencies": {
     "angular": "1.2.29",
     "bootstrap": "^3.3.6",
+    "express": "~3.4.0",
     "jquery": "2.2.0",
     "restangular": "1.4.0",
     "underscore": "1.6.0",
     "protractor": "^3.1.1"
   },
-  "author": "",
   "license": "ISC"
 }

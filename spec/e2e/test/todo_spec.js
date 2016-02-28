@@ -3,7 +3,7 @@ var mainPage = new MainPage();
 
 describe('Protractor Demo App', function() {
   beforeEach(function() {
-    browser.get('http://pedrro.github.io/TodoList/');
+    browser.get('http://localhost:3456');
   });
 
   it('should have add a todo', function() {
