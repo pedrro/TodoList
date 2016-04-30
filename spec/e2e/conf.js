@@ -3,7 +3,9 @@ exports.config = {
   framework: 'jasmine',
   specs: ['test/**_spec.js'],
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'chrome',
+    shardTestFiles: true,
+    maxInstances: 2
   }
 };
 

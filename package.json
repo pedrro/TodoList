@@ -5,8 +5,9 @@
   "description": "learning angular",
   "scripts": {
     "postinstall": "./node_modules/protractor/bin/webdriver-manager update",
-    "start": "node server.js > /dev/null 2>&1 &",
-    "test": "node_modules/.bin/protractor spec/e2e/conf.js"
+    "pree2etest": "node server.js > /dev/null 2>&1 &",
+    "e2etest": "node_modules/.bin/protractor spec/e2e/conf.js",
+    "test": "karma start"
   },
   "dependencies": {
     "angular": "1.2.29",
